@@ -1,0 +1,91 @@
+
+*{
+   /* margin: 0px;
+    padding: 0px;*/
+    box-sizing: border-box;
+    /*font-family: 'Barlow';*/
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3db51;
+
+    font-size: 12px;
+}
+
+/*------------------------------------HEADER-------------------------------------------------*/
+.icono-menu {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(0, 89, 255);
+}
+
+.promo {
+    text-align: center;
+}
+
+.menu-lista ul,
+.usuario-lista ul {
+    list-style-type: none;
+    /* Elimina las viñetas de la lista */
+}
+
+.menu-lista a,
+.usuario-lista a {
+    text-decoration: none;
+    /* Elimina el subrayado predeterminado de los enlaces */
+    color: black;
+    /* Cambia el color de la letra a negro */
+}
+
+/*------------------------------------MAIN-------------------------------------------------*/
+h2 {
+    font-size: 24px;
+    /* Titulares (Basado en tu última visita/Ofertas) */
+}
+
+/*p {
+    font-size: 16px; /* Descuentos y Descripciones 
+} */
+p.productos-precios {
+    font-size: 18px;
+    /* Precios */
+}
+
+p.productos-descuentos {
+    font-size: 16px;
+    /* descuentos */
+}
+
+p.productos-descripciones {
+    /*   <-------------  NO TENGO DESCRPCIONES TODAVIA */
+    font-size: 16px;
+    /* descripciones */
+}
+
+/*--------------------------------- FOOTER --------------------------------------------------*/
+footer {
+    text-align: center;
+    /* Centrar el contenido del pie de página */
+    padding: 20px;
+    /* Agregar un espacio de 20px alrededor del contenido */
+    background-color: white;
+}
+
+.footer-icono {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(0, 89, 255);
+}
+
+h3,
+.footer-descripcion {
+    margin: 0;
+    /* Elimina el margen vertical predeterminado */
+}
+
+.footer-seccion {
+    margin-bottom: 40px;
+    /* Ajusta el valor según sea necesario */
+}
