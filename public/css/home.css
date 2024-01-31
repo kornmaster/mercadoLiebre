@@ -24,7 +24,7 @@ body > header {
     height: auto;
   }
   input[type="text"] {/*la barra para buscar se adapte*/
-    max-width: 40%;
+    max-width: 30%;
     width: 100%;
 }
 .icono-menu {
