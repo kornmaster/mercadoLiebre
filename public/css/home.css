@@ -1,25 +1,47 @@
 
 *{
-   /* margin: 0px;
-    padding: 0px;*/
-    box-sizing: border-box;
-    /*font-family: 'Barlow';*/
+    margin: 0px;
+    padding: 0px;
+   box-sizing: border-box; /*es buena practica*/
+   /* font-family: 'Barlow';*/
+   /*border: 1px solid #000;*/
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f3db51;
-
     font-size: 12px;
+    background-color: #ebebeb;
 }
 
 /*------------------------------------HEADER-------------------------------------------------*/
-.icono-menu {
-    font-size: 2em;
-    margin-bottom: 10px;
-    text-align: center;
-    color: rgb(0, 89, 255);
-}
+body > header {
+    background-color: #f3db51; /*encabezado color*/
+   padding-top: 15px;
+  padding-bottom: 15px;
 
+  }
+  .logo img {/*el logo de mercado libre se adapte*/
+    max-width: 100%;
+    height: auto;
+  }
+  input[type="text"] {/*la barra para buscar se adapte*/
+    max-width: 40%;
+    width: 100%;
+}
+.icono-menu {
+    background-color: rgb(3, 80, 221);
+    border-radius: 15%; /*manipulo la forma del fondo ej ciculo o cuadrado*/
+    width: 35px; /*ancho*/
+    height: 35px;/*alto*/
+    display:flex;
+    justify-content: center; /*alineacion horizontal*/
+    align-items: center; /*alineacion vertical*/
+    font-size: 1.4em;  /*doble del tamaño del elemento padre*/
+    margin: auto;
+  
+}
+.icono-menu i {
+color: white;
+}
 .promo {
     text-align: center;
 }
@@ -39,14 +61,59 @@ body {
 }
 
 /*------------------------------------MAIN-------------------------------------------------*/
-h2 {
-    font-size: 24px;
-    /* Titulares (Basado en tu última visita/Ofertas) */
-}
+main {
+    max-width: 90%;  /*ancho de la pantalla*/
+    padding: 15px;
+    margin:  auto;  /*se centra*/
+   background-color: #ebebeb;
+   
+   /*padding-bottom: 15px;*/
+  }
+  h2 {
+    
+    font-size: 24px ;
+    color: #666;
+    text-align: center;
+     /* Titulares (Basado en tu última visita/Ofertas) */
+ }
+article {
+    
+    max-width: 320px; /*el tamañano del articulo es igual a la imagen*/
+    margin:auto; /*centro el articulo al medio de main*/
+margin-top: 10px; /*separacion de 10px cada article*/
 
-/*p {
-    font-size: 16px; /* Descuentos y Descripciones 
-} */
+background-color: white;
+/*box-shadow: 0px 0px 10px rgb(100, 100, 100);/*sombrado en los bordes*/
+
+}
+.productos-imagenes {
+    max-width: 100%; /* La imagen no será más ancha que su tamaño original */
+    height: auto;    /* La altura se ajustará automáticamente según el ancho */
+  }
+.product {
+   border-top: 1px solid #ebebeb; /*linea superior*/
+   padding: 15px; /*relleno*/
+   /*text-align: left;/*todo a la izquierda*/
+ /*margin:auto;*/
+
+  }
+
+.icono-envio {
+    display: inline-block;
+    width: 36px; /* ajusta el tamaño del círculo según tus necesidades ancho */
+    height: 40px; /* ajusta el tamaño del círculo según tus necesidades alto*/
+    background-color: white; /* color de fondo del círculo */
+    border: 1px solid #39b54a;/*borde del fondo*/
+    border-radius: 50%; /* crea un círculo mediante el uso de bordes redondeados */
+    text-align: left; /* centra el contenido horizontalmente */
+    padding-left: 4px; /* añade un espacio de padding a la izquierda */
+    line-height: 30px; /* centra el contenido verticalmente*/ 
+  }
+  
+  .icono-envio i {
+    color: #39b54a; /* color del ícono */
+    font-size: 16px; /* ajusta el tamaño del ícono según tus necesidades */
+  }
 p.productos-precios {
     font-size: 18px;
     /* Precios */
@@ -54,13 +121,15 @@ p.productos-precios {
 
 p.productos-descuentos {
     font-size: 16px;
+    color: #39b54a;
     /* descuentos */
 }
 
 p.productos-descripciones {
-    /*   <-------------  NO TENGO DESCRPCIONES TODAVIA */
+    color: #666;
     font-size: 16px;
     /* descripciones */
+    margin-top: 15px;
 }
 
 /*--------------------------------- FOOTER --------------------------------------------------*/
@@ -70,22 +139,51 @@ footer {
     padding: 20px;
     /* Agregar un espacio de 20px alrededor del contenido */
     background-color: white;
+    color: #666;
 }
 
-.footer-icono {
+.footer-icono i {
     font-size: 2em;
     margin-bottom: 10px;
     text-align: center;
-    color: rgb(0, 89, 255);
+   
+    color: rgb(3, 80, 221);
 }
 
 h3,
 .footer-descripcion {
-    margin: 0;
+    
     /* Elimina el margen vertical predeterminado */
+    margin: 0;
+    color: #666;
 }
 
 .footer-seccion {
     margin-bottom: 40px;
     /* Ajusta el valor según sea necesario */
 }
+.footer-copyright {
+    text-align: left;
+  }
+
+  /* --------------- CORTES -----------------*/
+  @media  (max-width: 360px) {
+    .productos-descripciones, .menu-lista, .usuario-lista {
+      display: none;
+    }
+  }
+  
+  /* Agregar box-shadow en dispositivos de tablet o resoluciones superiores (ancho mínimo 361px) */
+  @media  (min-width: 361px) {
+    article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      }
+      .icono-menu {
+        display: none;
+      }
+  }
+  
+  /* Estilos para dispositivos de escritorio (ancho mínimo 769px) */
+  @media  (min-width: 769px) {
+    /* Puedes agregar estilos específicos para dispositivos de escritorio si es necesario */
+  }

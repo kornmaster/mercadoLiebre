@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/home.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><!-- para las fuentes-->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> <!-- para los iconos-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <!-- para los iconos-->
 
   <title>Mercado libre</title>
 
@@ -19,22 +20,23 @@
         <img width="320" id="logo" title="Mercado liebre" src="/img/logo-mercado-liebre.svg" alt="Logo de la empresa">
       </a>
     </div>
-    <h1>Mercado libre</h1><!-- si agrego hidden no se vera -->
+    <h1 hidden>Mercado libre</h1><!-- si agrego hidden no se vera -->
 
     <div class="search-bar">
       <!-- Aquí puedes agregar el código para la barra de búsqueda -->
       <input type="text" placeholder="Buscar..."> <!-- ingresa texto para la busqueda-->
-      <button type="submit">Buscar</button> <!-- boton buscar-->
-      <div class="icono-busqueda"> <!-- icono de busqueda-->
-        <i class="fas fa-search"></i>
-      </div>
+      <button type="submit" title="Buscar"> <!-- boton buscar-->
+        <div class="icono-busqueda"> <!-- icono de busqueda-->
+          <i class="fas fa-search"></i>
+        </div>
+      </button>
     </div>
-    
-    
+
+
     <!-- en ves de usara div arriba en la clase usamos  <form action="/">   </form> ,yo lo dejo con div-->
 
     <div class="promo">
-      
+
       <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
     </div>
 
@@ -47,7 +49,7 @@
 
       </ul>
     </nav>
-    <nav  class="usuario-lista">
+    <nav class="usuario-lista">
       <ul> <!-- Lista desordenada -->
 
         <li><a href="#">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
@@ -61,45 +63,61 @@
     </div>
 
   </header>
-
+  <!-- --------------------MAIN------------------------- -->
   <main>
     <section class="ultima-visita-section">
       <header>
         <h2>Basado en tu última visita</h2>
       </header>
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
         <div class="product">
-          <img width="320" src="img/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$6.770</p>
-          <p class="productos-descuentos">40% OFF</p>
-          <p><strong>Cafetera Moulinex</strong></p>
+          <p class="productos-descuentos">40% off</p>
+          <p class="productos-descripciones"><strong>Cafetera Moulinex</strong></p>
         </div>
       </article>
 
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
+
         <div class="product">
-          <img width="320" src="img/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$230.000</p>
           <p class="productos-descuentos">20% off</p>
-          <p><strong>MacBook Pro 2019</strong></p>
+          <p class="productos-descripciones"><strong>MacBook Pro 2019</strong></p>
         </div>
       </article>
 
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+
         <div class="product">
-          <img width="320" src="img/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$70.500</p>
           <p class="productos-descuentos">10% off</p>
-          <p><strong>Samsung Galaxy S10</strong></p>
+          <p class="productos-descripciones"><strong>Samsung Galaxy S10</strong></p>
         </div>
       </article>
 
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43&quot;">
+
         <div class="product">
-          <img width="320" src="img/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43&quot;">
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$23.200</p>
           <p class="productos-descuentos">5% off</p>
-          <p><strong>SmartTv Samsung 43"</strong></p>
+          <p class="productos-descripciones"><strong>SmartTv Samsung 43"</strong></p>
         </div>
       </article>
     </section>
@@ -109,43 +127,59 @@
       </header>
 
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+
         <div class="product">
-          <img width="320" src="img/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$6.770</p>
           <p class="productos-descuentos">40% OFF</p>
-          <p><strong>Cafetera Moulinex</strong></p>
+          <p class="productos-descripciones"><strong>Cafetera Moulinex</strong></p>
         </div>
       </article>
 
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
+
         <div class="product">
-          <img width="320" src="img/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$230.000</p>
           <p class="productos-descuentos">20% off</p>
-          <p><strong>MacBook Pro 2019</strong></p>
+          <p class="productos-descripciones"><strong>MacBook Pro 2019</strong></p>
         </div>
       </article>
 
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+
         <div class="product">
-          <img width="320" src="img/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$70.500</p>
           <p class="productos-descuentos">10% off</p>
-          <p><strong>Samsung Galaxy S10</strong></p>
+          <p class="productos-descripciones"><strong>Samsung Galaxy S10</strong></p>
         </div>
       </article>
 
       <article>
+        <img class="productos-imagenes" width="320" src="img/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43&quot;">
+
         <div class="product">
-          <img width="320" src="img/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43&quot;">
+          <div class="icono-envio">
+            <i class="fas fa-truck"></i>
+          </div>
           <p class="productos-precios">$23.200</p>
           <p class="productos-descuentos">5% off</p>
-          <p><strong>SmartTv Samsung 43"</strong></p>
+          <p class="productos-descripciones"><strong>SmartTv Samsung 43"</strong></p>
         </div>
       </article>
     </section>
   </main>
-
+  <!-- ------------------------FOOTER ----------------------- -->
   <footer>
     <section class="footer-seccion">
       <div class="footer-icono"> <!-- icono -->
@@ -162,7 +196,8 @@
         <i class="fas fa-gift"></i>
       </div>
       <h3>Envío gratis desde $ 2.500</h3>
-      <p class="footer-descripcion">Solo por estar registrad@ en Mercado Liebre<br> tenés envíos gratis en miles de productos. Es<br> un beneficio
+      <p class="footer-descripcion">Solo por estar registrad@ en Mercado Liebre<br> tenés envíos gratis en miles de
+        productos. Es<br> un beneficio
         de Mercado Puntos.</p>
     </section>
 
@@ -171,7 +206,8 @@
         <i class="fas fa-user-shield"></i>
       </div>
       <h3>Seguridad, de principio a fin</h3>
-      <p class="footer-descripcion">¿No te gusta? ¡Devolvelo! En Mercado Liebre,<br> no hay nada que no puedas hacer, porque estás<br> siempre
+      <p class="footer-descripcion">¿No te gusta? ¡Devolvelo! En Mercado Liebre,<br> no hay nada que no puedas hacer,
+        porque estás<br> siempre
         protegid@.</p>
     </section>
 
