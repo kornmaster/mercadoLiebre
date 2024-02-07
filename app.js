@@ -10,9 +10,15 @@ app.get('/', ( req, res ) =>{
     const pathHome = path.join(__dirname, 'views/home.html')
     res.sendFile(pathHome);
 })
+app.get('/register', ( req, res ) =>{
+    const pathRegister = path.join(__dirname, 'views/register.html')
+    res.sendFile(pathRegister);
+});
 
-
-
+app.get('/login', ( req, res ) =>{
+    const pathLogin = path.join(__dirname, 'views/login.html')
+    res.sendFile(pathLogin);
+});
 
 
 // Estatica la carpeta public

@@ -4,7 +4,8 @@
     padding: 0px;
    box-sizing: border-box; /*es buena practica*/
    /* font-family: 'Barlow';*/
-   /*border: 1px solid #000;*/
+   /*border: 1px solid red;
+   /*360 768 1279*/
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -14,115 +15,199 @@ body {
 
 /*------------------------------------HEADER-------------------------------------------------*/
 body > header {
-    background-color: #f3db51; /*encabezado color*/
-   padding-top: 15px;
-  padding-bottom: 15px;
+    background-color: #EAC926; /*encabezado color*/
+   padding: 20px;
 
   }
-  .logo img {/*el logo de mercado libre se adapte*/
-    max-width: 100%;
-    height: auto;
+  .main-header-top-bar {
+   
+    display: flex;/*trabajamos sobre el contenedor*/
+    flex-wrap: wrap;
+    justify-content: space-around;/*acomoda el primero y ultimo al rincon*/
+/*margin: auto;*/
+/*flex: 100%;*/
+padding: 10px;
+align-items: stretch;/*ocupa todo el alto del item (de alguna manera lo centra)*/
+}
+
+  .logo{/*el logo de mercado libre se adapte*/
+    max-width:45%;
+    
+flex: 50%;
+
   }
-  input[type="text"] {/*la barra para buscar se adapte*/
-    max-width: 30%;
-    width: 100%;
+
+  .logo img{
+    max-width: 100%; /* La imagen no será más ancha que su tamaño original */
+    height: auto;    /* La altura se ajustará automáticamente según el ancho */
+  } 
+  .search-bar{
+    display: flex;/*hago un flex de la barra de busqueda con el boton*/
+    background-color: white;
+    /*align-self: center;*/
+  border-radius: 5px;
+  }
+  .search-bar{
+    max-width:45%;
+    /*height: 50px;/*
+  /*  max-height: 42px;*/
+    flex: 50%;
+   
+    /*margin: auto;
+ /*  justify-content: center;*/
+ align-items: center;
+ 
+ /*margin-top: 10px;*/
+  }
+  input[type="text"]{/*la barra para buscar se adapte*/
+    width: 100%; /*ocupa todo el ancho*/
+    height: 100%;
+    border-radius: 5px;
+    border: transparent;
+  /* flex: 100%;*/
+ /* margin: auto;*/
 }
+button[type="submit"] {/*boton*/
+max-width: 30%;
+text-align: center;
+border: transparent;
+
+}
+.icono-busqueda{
+  width: 100%;
+height:100%;
+color: #666;
+  font-size:130%;
+  background-color: white;
+  padding-top: 10%;/*centro la lupa en su contorno*/
+
+}
+  .promo{
+   /* flex: 50%;*/
+    /*margin: 10px 0;*/
+    padding-top: 10px;
+    /*width: 100%;*/
+/*height: 50px;*/
+flex: 50%;
+
+  }
 .icono-menu {
-    background-color: rgb(3, 80, 221);
-    border-radius: 15%; /*manipulo la forma del fondo ej ciculo o cuadrado*/
-    width: 35px; /*ancho*/
-    height: 35px;/*alto*/
-    display:flex;
-    justify-content: center; /*alineacion horizontal*/
-    align-items: center; /*alineacion vertical*/
-    font-size: 1.4em;  /*doble del tamaño del elemento padre*/
+    background-color:#03264C;
+    color: white;
+    display:block;
+    max-width: 50px; /*ancho del fondo asi no ocupa toda la linea*/
+    padding: 15px 0; /*aultura y 0 los lados, max width se encarga del ancho*/
+    border-radius: 8%; /*manipulo la forma del fondo ej ciculo o cuadrado*/
+    text-align: center;/*centra el contenido*/
+    font-size: 18px;
     margin: auto;
-  
+    
 }
-.icono-menu i {
-color: white;
-}
+
 .promo {
     text-align: center;
+    font-size: 0.9em;
 }
 
-.menu-lista ul,
-.usuario-lista ul {
+
+.menu ul {
+  /* Elimina las viñetas de la lista */
     list-style-type: none;
-    /* Elimina las viñetas de la lista */
+    display: none;
+    
 }
 
-.menu-lista a,
-.usuario-lista a {
+.menu a {
     text-decoration: none;
     /* Elimina el subrayado predeterminado de los enlaces */
-    color: black;
+    color: #222222;
     /* Cambia el color de la letra a negro */
+    display: inline-block;/*linea y bloke , pero lo hago para darle relleno con padding*/
+/*padding:5px 0;*/
+font-size: 15px;
 }
 
 /*------------------------------------MAIN-------------------------------------------------*/
+.fondo-publicidad{
+  width: 100%;
+}
 main {
     max-width: 90%;  /*ancho de la pantalla*/
     padding: 15px;
     margin:  auto;  /*se centra*/
    background-color: #ebebeb;
    
-   /*padding-bottom: 15px;*/
   }
+
   h2 {
-    
+    /* Titulares (Basado en tu última visita/Ofertas) */
     font-size: 24px ;
     color: #666;
     text-align: center;
-     /* Titulares (Basado en tu última visita/Ofertas) */
+     margin: 15px;
+ }
+ .articulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  padding: 20px;
  }
 article {
     
-    max-width: 320px; /*el tamañano del articulo es igual a la imagen*/
+    max-width: 90%; /*el tamañano del articulo es igual a la imagen*/
     margin:auto; /*centro el articulo al medio de main*/
-margin-top: 10px; /*separacion de 10px cada article*/
-
+margin: 10px; /*separacion de 10px cada article*/
 background-color: white;
-/*box-shadow: 0px 0px 10px rgb(100, 100, 100);/*sombrado en los bordes*/
-
 }
+
 .productos-imagenes {
     max-width: 100%; /* La imagen no será más ancha que su tamaño original */
     height: auto;    /* La altura se ajustará automáticamente según el ancho */
   }
 .product {
    border-top: 1px solid #ebebeb; /*linea superior*/
-   padding: 15px; /*relleno*/
-   /*text-align: left;/*todo a la izquierda*/
- /*margin:auto;*/
-
-  }
-
-.icono-envio {
-    display: inline-block;
-    width: 36px; /* ajusta el tamaño del círculo según tus necesidades ancho */
-    height: 40px; /* ajusta el tamaño del círculo según tus necesidades alto*/
-    background-color: white; /* color de fondo del círculo */
-    border: 1px solid #39b54a;/*borde del fondo*/
-    border-radius: 50%; /* crea un círculo mediante el uso de bordes redondeados */
-    text-align: left; /* centra el contenido horizontalmente */
-    padding-left: 4px; /* añade un espacio de padding a la izquierda */
-    line-height: 30px; /* centra el contenido verticalmente*/ 
+   padding: 20px; /*relleno*/
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-end;
+   
+   
   }
   
+  .product .icono-envio {
+    display: block  ;/*en bloque*/
+    font-size: 16px;/*tamaño imagen*/
+    padding: 5px;
+    width: 30px; /* ajusta el tamaño del círculo según tus necesidades ancho */
+    height: 30px; /* ajusta el tamaño del círculo según tus necesidades alto*/
+    border: 1px solid #39b54a ;
+    background-color: #fff; /* color de fondo del círculo */
+    border-radius: 50%; /* crea un círculo mediante el uso de bordes redondeados */
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    
+  }
+  .product{
+    position: relative;
+  }
   .icono-envio i {
     color: #39b54a; /* color del ícono */
     font-size: 16px; /* ajusta el tamaño del ícono según tus necesidades */
   }
 p.productos-precios {
+  /* Precios */
     font-size: 18px;
-    /* Precios */
+    flex: 30%;
 }
 
 p.productos-descuentos {
+   /* descuentos */
     font-size: 16px;
     color: #39b54a;
-    /* descuentos */
+    flex: 70%;
+    padding-bottom: 1px;
 }
 
 p.productos-descripciones {
@@ -130,6 +215,7 @@ p.productos-descripciones {
     font-size: 16px;
     /* descripciones */
     margin-top: 15px;
+    display: none;
 }
 
 /*--------------------------------- FOOTER --------------------------------------------------*/
@@ -167,23 +253,106 @@ h3,
   }
 
   /* --------------- CORTES -----------------*/
-  @media  (max-width: 360px) {
-    .productos-descripciones, .menu-lista, .usuario-lista {
-      display: none;
-    }
-  }
+ 
   
-  /* Agregar box-shadow en dispositivos de tablet o resoluciones superiores (ancho mínimo 361px) */
   @media  (min-width: 361px) {
+    .logo img{
+      max-width: 95%; /* 95% del flex*/
+     
+    } 
+    .search-bar{
+      
+     max-height: 42px;/*42*/
+    /* margin: auto;*/
+    margin-top: 1%;
+    
+    }
+    .promo {
+     text-align: center;
+      font-size: 1.2em;
+  }
+    p.productos-descripciones, .menu ul {
+      display: block;
+    }
+    .menu{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5%;
+    }
+
     article {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      /*sombreado al contorno*/
       }
       .icono-menu {
         display: none;
       }
+      article {
+    
+        max-width: 40%; 
+    
+    }
   }
   
   /* Estilos para dispositivos de escritorio (ancho mínimo 769px) */
   @media  (min-width: 769px) {
-    /* Puedes agregar estilos específicos para dispositivos de escritorio si es necesario */
+    .logo img{
+      max-width: 80%; /*  del flex*/
+     
+    } 
+    input[type="text"]{/*la barra para buscar se adapte*/
+      width: 100%; /*ocupa todo el ancho*/
+      height: 100;
+      
+    
+  }
+    .main-header-top-bar {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+   .logo, .search-bar, .promo{
+    max-width: 33%;
+    flex: 33%;
+    margin-top: 0;
+    padding-top: 0;
+   }
+    article {
+      max-width: 30%; 
+    }
+    .promo{
+      max-width: 28%;/*tamañano del fondo 200px */
+     text-align: right;
+     font-size: 1.6em;
+     
+  }
+  .menu{
+    
+    padding: 2% 2% 0;
+  }
+  .menu ul{
+    display: flex;
+ 
+  }
+  .menu li{
+    margin: 0 5px;
+  }
+  }
+  @media (min-width:1280px){
+    .menu{
+    
+      padding: 2% 1% 0;
+    }
+    article {
+      max-width: 23%; 
+    }
+    .promo{
+      max-width: 40%;/*tamañano del fondo 200px */
+     
+     font-size: 1.6em;
+  }
+  .menu a{
+    
+    font-size: 1.5em ;
+}
   }

@@ -1,0 +1,20 @@
+input[type="submit"]{
+    border: none;
+    height: 30px;
+   width: 95%;
+   max-width: 700px;
+   border-radius: 7px;
+}
+button {
+    border: none; /* Elimina todos los bordes */
+    /* Otros estilos opcionales */
+    height: 30px;
+    width: 95%;
+    max-width: 700px;
+    border-radius: 7px;
+    background-color:#03264C;
+    color: white;
+  }
+ form{
+    padding-top: 30vh;
+ }

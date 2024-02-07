@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   box-sizing: border-box; /*es buena practica*/
+   /* font-family: 'Barlow';*/
+   /*border: 1px solid red;
+   /*360 768 1279*/
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #ebebeb;
+}
+form { /*formulario #register*/
+    background-color: #e0e0e0; /* Color gris que prefieras */
+    padding: 20px; /* Agrega algún relleno para que se vea mejor */
+    border-radius: 10px; /* Añade bordes redondeados si lo deseas */
+    max-width: 70vh;
+    margin: auto;
+    height: 100vh;
+  }
+  
+ 
+  form>div { 
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+ 
+   form>div div{
+    margin: 15px 0;
+    
+   }
+   .register-checkbox , .register-radio{
+    font-size: 14px;
+    
+  font-weight: normal;
+   }
+  #register > div > label {
+    display: none;
+  }
+  form > div > label {
+    display: none;
+  }
+ 
+
+  #register>div>input{ /* para el tamaño de los input menos check y radio*/
+   border: none;
+    height: 30px;
+   width: 95%;
+   max-width: 700px;
+   border-radius: 7px;
+  }
+  form>div>input{ /* para el tamaño de los input menos check y radio*/
+    border: none;
+     height: 30px;
+    width: 95%;
+    max-width: 700px;
+    border-radius: 7px;
+   }
+  input[type="checkbox"],input[type="radio"] {/*input check y radio*/
+    margin: 10px 19px;
+   
+  }
+  .boton-login, .boton-reset{
+    
+    border: none;
+    height: 50px;
+    width: 100px;
+    border-radius: 7px;
+ }
+ .botones{
+  padding:30px 0 ;
+ }
+ .boton-login{
+  background-color:#39b54a;
+    color: white;
+ }
+ .boton-reset{
+  background-color:red;
+    color: white;
+ }
