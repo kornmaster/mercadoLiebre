@@ -14,7 +14,12 @@ button {
     border-radius: 7px;
     background-color:#03264C;
     color: white;
+    transition: background-color 0.3s ease; /* Agrega una transición suave para el cambio de color */
   }
+  button:hover {
+   background-color: #0022AA; /* Cambia el color de fondo al pasar el mouse */
+ }
+ 
  form{
     padding-top: 30vh;
  }

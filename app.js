@@ -28,6 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 /*app.listen( 3030, () => console.log(`Server up on PORT:  http://localhost:3030`) )*/
 
 // esto lo cambie para usar render
-const PORT = process.env.PORT || 3030
+const PORT = process.env.PORT || 3030 //3000 lo toma si es local y PORT es el que da render para su uso
 
 app.listen(PORT, () => console.log(`Server up on PORT:  http://localhost:${PORT}`));

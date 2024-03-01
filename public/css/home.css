@@ -17,6 +17,10 @@ body {
 body > header {
     background-color: #EAC926; /*encabezado color*/
    padding: 20px;
+   position: fixed; /*fija el header*/
+   /*top: 0;*/
+   z-index: 100; /*hace q este siempre arriba*/
+   width: 100%; /*ocupa todo el ancho*/
 
   }
   .main-header-top-bar {
@@ -129,11 +133,17 @@ font-size: 15px;
 
 /*------------------------------------MAIN-------------------------------------------------*/
 .fondo-publicidad{
+   /*position: relative;*/
+   /* z-index: 90;*/
+  
   width: 100%;
+ /* margin-top: 154px; */
 }
 main {
+  /*padding-top: 250px;*/
     max-width: 90%;  /*ancho de la pantalla*/
-    padding: 15px;
+    padding: 180px 15px 15px;
+    /*padding: 15px;*/
     margin:  auto;  /*se centra*/
    background-color: #ebebeb;
    
@@ -154,13 +164,19 @@ main {
   padding: 20px;
  }
 article {
-    
+    position: relative;
     max-width: 90%; /*el tamañano del articulo es igual a la imagen*/
     margin:auto; /*centro el articulo al medio de main*/
 margin: 10px; /*separacion de 10px cada article*/
 background-color: white;
+transition: box-shadow 0.3s ease;
 }
 
+
+  article:hover {
+    
+    box-shadow: 0 0 20px rgba(8, 8, 8, 0.8);/*sombreado muy oscuro*/
+  }
 .productos-imagenes {
     max-width: 100%; /* La imagen no será más ancha que su tamaño original */
     height: auto;    /* La altura se ajustará automáticamente según el ancho */
@@ -171,7 +187,8 @@ background-color: white;
    display: flex;
    flex-wrap: wrap;
    align-items: flex-end;
-   
+   /*align-items: center;*/
+
    
   }
   
@@ -187,8 +204,28 @@ background-color: white;
     position: absolute;
     right: 20px;
     top: -15px;
-    
   }
+ /*--------------------------------------------------*/
+  @keyframes girar {
+    0% { transform: rotate(0deg); } /* Estado inicial */
+    50% { transform: rotate(-90deg); } /* Gira 90° */
+    100% { transform: rotate(0deg); } /* Regresa a su posición original */
+  }
+  
+  .icono-envio i {
+    transition: transform 0.5s ease; /* Transición para suavizar los cambios */
+  }
+  
+  .icono-envio:hover i {
+    animation: girar 2s infinite; /* Aplica la animación de giro infinitamente cuando el mouse está sobre la imagen */
+  }
+  /*----------------------------------------------------*/
+.articulo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
   .product{
     position: relative;
   }
@@ -196,46 +233,114 @@ background-color: white;
     color: #39b54a; /* color del ícono */
     font-size: 16px; /* ajusta el tamaño del ícono según tus necesidades */
   }
-p.productos-precios {
-  /* Precios */
-    font-size: 18px;
-    flex: 30%;
-}
+   .productos-precios-descuentos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando el contenedor es demasiado estrecho */
+  padding:5px 0;
+  /*margin-bottom: 5px;*/
+  /*align-items: center*/
+  }
+  span.productos-precios {
+    /* Precios */
+      font-size: 18px;
+     /* flex: 30%;*/
+     /* max-width: 50%;*/
+  }
+  span.productos-descuentos {
+    /* descuentos */
+     font-size: 16px;
+     color: #39b54a;
+    /* flex: 100%;*/
+    /* width: 50%;*/
+     padding-top: 1px;
+     padding-left: 5px;
+ }
 
-p.productos-descuentos {
-   /* descuentos */
-    font-size: 16px;
-    color: #39b54a;
-    flex: 70%;
-    padding-bottom: 1px;
-}
 
-p.productos-descripciones {
+
+/*.productos-precios,
+.productos-descuentos {
+  display: inline-block; /* Coloca los párrafos uno al lado del otro */
+  margin-right: 10px; /* Ajusta el margen derecho entre los párrafos según sea necesario */
+
+
+p.productos-nombres {
     color: #666;
     font-size: 16px;
     /* descripciones */
-    margin-top: 15px;
-    display: none;
+   /* margin-top: 15px;*/
+   /* display: none;*/
+}
+.product:hover .productos-nombres {
+ /*display: block;*/
+ opacity: 1;/*lo vuelve visible*/
+}
+.product .productos-nombres{
+  background-color: rgb(0, 0, 0, 0.5);
+    color: #ffffff;
+   /* position:absolute;*/
+    display: flex;
+justify-content: center;
+align-items: center;
+/*opacity: 0; /*invisible*/
+transition: all 450ms;
+flex: 100%;
+/*width: 70%;/*todo el ancho*/
+left: 0; /*ubica la posicion absoluta*/
+/*bottom: 86px;*/
+top: 0;
+/*bottom: 60px;*/
+right: 70px;
+}
+
+p.productos-descripciones {
+ display: none;
+ 
+  padding-right: 10px;
+ /* max-width: 80%;*/
+ /*display: flex;*/
+ 
+}
+.articulo:hover .productos-descripciones {
+  display: block;
+  
+  /*width: 350px;*/
+ /*align-items: left;*/
+
 }
 
 /*--------------------------------- FOOTER --------------------------------------------------*/
 footer {
-    text-align: center;
+  display: flex; /* Establecer el contenedor de flexbox */
+  flex-direction: column; /* Dirección de los elementos flexibles: columna */
+  align-items: center; /* Centrar los elementos en el eje principal */
+}
+footer {
+   text-align: center;
     /* Centrar el contenido del pie de página */
     padding: 20px;
     /* Agregar un espacio de 20px alrededor del contenido */
     background-color: white;
     color: #666;
 }
+.footer-seccion:last-child { /*agarra el ultimo elemento de un contenedor padre*/
+ /* margin-right: auto; /* Mueve el último elemento a la izquierda */
+  align-self: flex-start;/*tambien  Mueve el último elemento a la izquierda */
+}
 
 .footer-icono i {
     font-size: 2em;
     margin-bottom: 10px;
     text-align: center;
-   
     color: rgb(3, 80, 221);
+    transition: color 0.3s ease;
 }
+/*.footer-icono:hover i {
+  color: #39b54a; /* Cambia el color del icono a azul claro al pasar el mouse */
 
+  .footer-icono i:hover {
+  color: #39b54a; /* Cambia el color del icono a azul claro al pasar el mouse */
+}
 h3,
 .footer-descripcion {
     
@@ -256,6 +361,11 @@ h3,
  
   
   @media  (min-width: 361px) {
+    main {
+      
+        padding: 195px 15px 15px;
+             
+      }
     .logo img{
       max-width: 95%; /* 95% del flex*/
      
@@ -271,7 +381,7 @@ h3,
      text-align: center;
       font-size: 1.2em;
   }
-    p.productos-descripciones, .menu ul {
+    /*p.productos-descripciones, */.menu ul {
       display: block;
     }
     .menu{
@@ -296,6 +406,26 @@ h3,
   
   /* Estilos para dispositivos de escritorio (ancho mínimo 769px) */
   @media  (min-width: 769px) {
+    footer {
+      flex-direction: row; /* Cambia a disposición horizontal */
+      flex-wrap: wrap;
+      justify-content: space-around; /* Espacio entre los elementos */
+     /*align-items: flex-start; /* Alinea los elementos en la parte superior */
+    }
+    .footer-seccion{
+      flex: 33%;
+     
+    }
+    main {
+      
+      padding: 149px 15px 15px;
+           
+    }
+    article:last-child { /*agarra el ultimo elemento de un contenedor padre*/
+      /*margin-left: -10px;*/
+     /* margin-right: auto; /* Mueve el último elemento a la izquierda */
+     /*align-self: flex-start;*/
+    }
     .logo img{
       max-width: 80%; /*  del flex*/
      
@@ -339,6 +469,11 @@ h3,
   }
   }
   @media (min-width:1280px){
+    main {
+      
+      padding: 185px 15px 15px;
+           
+    }
     .menu{
     
       padding: 2% 1% 0;
