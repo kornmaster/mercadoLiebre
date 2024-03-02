@@ -261,7 +261,7 @@ transition: box-shadow 0.3s ease;
 /*.productos-precios,
 .productos-descuentos {
   display: inline-block; /* Coloca los párrafos uno al lado del otro */
-  margin-right: 10px; /* Ajusta el margen derecho entre los párrafos según sea necesario */
+  /*margin-right: 10px; /* Ajusta el margen derecho entre los párrafos según sea necesario */
 
 
 p.productos-nombres {

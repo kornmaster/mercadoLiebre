@@ -6,7 +6,7 @@ const app = express();
 
 
 // Routes
-app.get('/', ( req, res ) =>{
+/*app.get('/', ( req, res ) =>{
     const pathHome = path.join(__dirname, 'views/home.html')
     res.sendFile(pathHome);
 })
@@ -18,12 +18,26 @@ app.get('/register', ( req, res ) =>{
 app.get('/login', ( req, res ) =>{
     const pathLogin = path.join(__dirname, 'views/login.html')
     res.sendFile(pathLogin);
-});
+});*/
+// modularizamos la ruta y ahora lo redireccionamos
+const homeRoute = require('./routes/homeRoutes.js') // trames el archivo homeRoutes.js
+app.use('/', homeRoute); // con esto lo redireccionamos al archivo
 
+const loginRoute = require('./routes/loginRoutes.js') // trames el archivo homeRoutes.js
+app.use('/', loginRoute); // con esto lo redireccionamos al archivo
+
+const registerRoute = require('./routes/registerRoutes.js') // trames el archivo homeRoutes.js
+app.use('/', registerRoute); // con esto lo redireccionamos al archivo
 
 // Estatica la carpeta public
 
-app.use(express.static(path.join(__dirname, 'public')));
+// ESTE ES MEJOR Y FUNCIONA CON MVC
+app.use(express.static('public')); 
+// este no funciona con mvc porque __dirname me da la ubicacion 
+//de donde esta la app, que coincidia donde estaba publica
+//ahora ya no coincide
+app.use(express.static(path.join(__dirname, 'public'))); 
+
 
 /*app.listen( 3030, () => console.log(`Server up on PORT:  http://localhost:3030`) )*/
 
