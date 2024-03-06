@@ -1,11 +1,11 @@
-input[type="submit"]{
+.main-login input[type="submit"]{
     border: none;
     height: 30px;
    width: 95%;
    max-width: 700px;
    border-radius: 7px;
 }
-button {
+.main-login button {
     border: none; /* Elimina todos los bordes */
     /* Otros estilos opcionales */
     height: 30px;
@@ -16,10 +16,10 @@ button {
     color: white;
     transition: background-color 0.3s ease; /* Agrega una transición suave para el cambio de color */
   }
-  button:hover {
+  .main-login button:hover {
    background-color: #0022AA; /* Cambia el color de fondo al pasar el mouse */
  }
  
- form{
+ .main-login form{
     padding-top: 30vh;
  }

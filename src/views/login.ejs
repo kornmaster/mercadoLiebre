@@ -2,17 +2,20 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/register.css">
+    <%- include('./partials/head.ejs') %>  
+  <link rel="stylesheet" href="/css/home.css"> 
+     <link rel="stylesheet" href="/css/register.css"> 
     <link rel="stylesheet" href="/css/login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><!-- para las fuentes-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <!-- para los iconos-->
-    <title>Register</title>
+   
+    <title>Login</title>
 </head>
 
 <body>
+  
+     <!-- --------------------HEADER------------------------- -->
+     <%- include('./partials/header.ejs') %> 
+     <!-- --------------------MAIN------------------------- -->
+     <main class="main-login">
     <form id="login" action="/login" method="GET">
         <div>
           <label for="usuario">Nombre de usuari@:</label>
@@ -28,7 +31,10 @@
         <button type="submit">Iniciar sesión</button>
       </form>
 
-
+    </main>
+    <!-- ------------------------FOOTER ----------------------- -->
+ 
+  <%- include('./partials/footer.ejs') %>
 </body>
 
 </html>

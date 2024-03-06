@@ -2,16 +2,18 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/home.css"> 
     <link rel="stylesheet" href="/css/register.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><!-- para las fuentes-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <!-- para los iconos-->
+    
     <title>Register</title>
 </head>
 
 <body>
+      <!-- --------------------HEADER------------------------- -->
+      <%- include('./partials/header.ejs') %> 
+      <!-- --------------------MAIN------------------------- -->
+    <main class="main-register">
     <!-- action: Direccion hacia donde se ENVIA la informacion y se va a trabajar con ella -->
     <form id="register" action="/register" method="GET">
         <div>
@@ -95,7 +97,10 @@
         <button type="reset" class="boton-reset">reset</button>
         </div>
     </form>
-
+</main>
+<!-- ------------------------FOOTER ----------------------- -->
+ 
+<%- include('./partials/footer.ejs') %>
 </body>
 
 </html>

@@ -12,9 +12,9 @@ body {
     font-size: 12px;
     background-color: #ebebeb;
 }
-
+/*body > header*/
 /*------------------------------------HEADER-------------------------------------------------*/
-body > header {
+.header-home{
     background-color: #EAC926; /*encabezado color*/
    padding: 20px;
    position: fixed; /*fija el header*/
@@ -23,7 +23,7 @@ body > header {
    width: 100%; /*ocupa todo el ancho*/
 
   }
-  .main-header-top-bar {
+  .header-home .main-header-top-bar {
    
     display: flex;/*trabajamos sobre el contenedor*/
     flex-wrap: wrap;
@@ -34,7 +34,7 @@ padding: 10px;
 align-items: stretch;/*ocupa todo el alto del item (de alguna manera lo centra)*/
 }
 
-  .logo{/*el logo de mercado libre se adapte*/
+ .logo{/*el logo de mercado libre se adapte*/
     max-width:45%;
     
 flex: 50%;
@@ -51,7 +51,7 @@ flex: 50%;
     /*align-self: center;*/
   border-radius: 5px;
   }
-  .search-bar{
+   .search-bar{
     max-width:45%;
     /*height: 50px;/*
   /*  max-height: 42px;*/
@@ -63,7 +63,7 @@ flex: 50%;
  
  /*margin-top: 10px;*/
   }
-  input[type="text"]{/*la barra para buscar se adapte*/
+  .header-home input[type="text"]{/*la barra para buscar se adapte*/
     width: 100%; /*ocupa todo el ancho*/
     height: 100%;
     border-radius: 5px;
@@ -71,13 +71,13 @@ flex: 50%;
   /* flex: 100%;*/
  /* margin: auto;*/
 }
-button[type="submit"] {/*boton*/
+ button[type="submit"] {/*boton*/
 max-width: 30%;
 text-align: center;
 border: transparent;
 
 }
-.icono-busqueda{
+ .icono-busqueda{
   width: 100%;
 height:100%;
 color: #666;
@@ -86,7 +86,7 @@ color: #666;
   padding-top: 10%;/*centro la lupa en su contorno*/
 
 }
-  .promo{
+.promo{
    /* flex: 50%;*/
     /*margin: 10px 0;*/
     padding-top: 10px;
@@ -95,7 +95,7 @@ color: #666;
 flex: 50%;
 
   }
-.icono-menu {
+  .icono-menu {
     background-color:#03264C;
     color: white;
     display:block;
@@ -114,7 +114,7 @@ flex: 50%;
 }
 
 
-.menu ul {
+ .menu ul {
   /* Elimina las viñetas de la lista */
     list-style-type: none;
     display: none;
@@ -381,10 +381,11 @@ h3,
      text-align: center;
       font-size: 1.2em;
   }
-    /*p.productos-descripciones, */.menu ul {
+    /*p.productos-descripciones, */
+    .menu ul {
       display: block;
     }
-    .menu{
+     .menu{
       display: flex;
       justify-content: space-between;
       padding: 0 5%;
@@ -430,7 +431,7 @@ h3,
       max-width: 80%; /*  del flex*/
      
     } 
-    input[type="text"]{/*la barra para buscar se adapte*/
+    .header-home input[type="text"]{/*la barra para buscar se adapte*/
       width: 100%; /*ocupa todo el ancho*/
       height: 100;
       
@@ -460,7 +461,7 @@ h3,
     
     padding: 2% 2% 0;
   }
-  .menu ul{
+  .header-home .menu ul{
     display: flex;
  
   }

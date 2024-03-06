@@ -1,0 +1,51 @@
+<header class="header-home"> <!-- Encabezado PRINCIPAL-->
+    <h1 hidden>Mercado liebre</h1><!-- si agrego hidden no se vera -->
+    <div class="main-header-top-bar">
+      <div class="logo">
+        <a href="/">
+          <img class="logoo" title="Mercado liebre" src="/img/logo-mercado-liebre.svg" alt="Logo de la empresa">
+        </a>
+      </div>
+
+      <!--no uso id porq ya hice estilos con class, tendria que cambiar el llamado de . a #-->
+      <form action="/" method="get" class="search-bar">
+        <!-- Aquí puedes agregar el código para la barra de búsqueda -->
+        <input type="text" placeholder="Buscar productos,marcas"> <!-- ingresa texto para la busqueda-->
+        <button type="submit" title="Buscar"> <!-- boton buscar-->
+          <div class="icono-busqueda"> <!-- icono de busqueda-->
+            <i class="fas fa-search"></i>
+          </div>
+        </button>
+
+      </form>
+
+      <!-- en ves de usara div arriba en la clase usamos  <form action="/">   </form> ,yo lo dejo con div-->
+
+      <div class="promo">
+
+        <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <ul class="menu-lista"> <!-- Lista desordenada -->
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Tiendas Oficiales</a></li>
+        <li><a href="#">Vender</a></li>
+        <li><a href="#">Ayuda</a></li>
+
+      </ul>
+
+      <ul class="menu-usuario"> <!-- Lista desordenada -->
+
+        <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+        <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i> </a></li>
+        <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+      </ul>
+    </nav>
+
+    <div class="icono-menu"> <!-- icono de menu-->
+      <i class="fas fa-bars"></i>
+    </div>
+
+  </header>

@@ -11,7 +11,7 @@ body {
     font-size: 12px;
     background-color: #ebebeb;
 }
-form { /*formulario #register*/
+.main-register form, .main-login form { /*formulario #register  y agrege el de login*/
     background-color: #e0e0e0; /* Color gris que prefieras */
     padding: 20px; /* Agrega algún relleno para que se vea mejor */
     border-radius: 10px; /* Añade bordes redondeados si lo deseas */

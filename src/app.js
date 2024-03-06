@@ -4,7 +4,15 @@ const path = require('node:path');
 const express = require('express');
 const app = express();
 
+///////////////// EJS TEMPLATE /////////////////
 
+// Indicamos el motor de plantilla
+app.set('view engine',  'ejs');
+//Direccionamos a las vistas
+app.set('views', path.join(__dirname, '/views')); 
+
+
+////////////////////////////////////////////////
 // Routes
 /*app.get('/', ( req, res ) =>{
     const pathHome = path.join(__dirname, 'views/home.html')
@@ -23,11 +31,6 @@ app.get('/login', ( req, res ) =>{
 const homeRoute = require('./routes/homeRoutes.js') // trames el archivo homeRoutes.js
 app.use('/', homeRoute); // con esto lo redireccionamos al archivo
 
-const loginRoute = require('./routes/loginRoutes.js') // trames el archivo homeRoutes.js
-app.use('/', loginRoute); // con esto lo redireccionamos al archivo
-
-const registerRoute = require('./routes/registerRoutes.js') // trames el archivo homeRoutes.js
-app.use('/', registerRoute); // con esto lo redireccionamos al archivo
 
 // Estatica la carpeta public
 
@@ -36,7 +39,7 @@ app.use(express.static('public'));
 // este no funciona con mvc porque __dirname me da la ubicacion 
 //de donde esta la app, que coincidia donde estaba publica
 //ahora ya no coincide
-app.use(express.static(path.join(__dirname, 'public'))); 
+/*app.use(express.static(path.join(__dirname, 'public'))); */
 
 
 /*app.listen( 3030, () => console.log(`Server up on PORT:  http://localhost:3030`) )*/
